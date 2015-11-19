@@ -1,0 +1,112 @@
+
+/***
+ * Image and options
+ */
+
+div.RMET div.stimulus {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+div.RMET div.response_left,
+div.RMET div.response_right {
+  display: inline-block;
+  font-size: 24pt;
+  width: 370px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+div.RMET div.image {
+  width: 100%;
+}
+
+div.RMET img {
+  width: 700px;
+}
+
+div.RMET div.response_left {
+  text-align: left;
+}
+
+div.RMET div.response_right {
+  text-align: right;
+}
+
+
+/*****************************
+ * Answers surrounding image *
+ *****************************/
+
+div.RMET input[type=radio].answer {
+  display: none;
+}
+
+div.RMET input[type=radio].answer:hover,
+div.RMET input[type=radio].answer:hover + label {
+  cursor: pointer;
+  color: #602020;
+}
+
+div.RMET input[type=radio].answer + label {
+  display: inline-block;
+  line-height: 1.5em;
+  font-weight: normal;
+}
+
+div.RMET input[type=radio].answer:checked + label {
+  font-weight: bold;
+}
+
+
+/********************************
+ * Emotion-definition selection *
+ ********************************/
+
+/** Encapsulating DIV and Title **/
+div.RMET div.definitions {
+  text-align: center;
+  font-size: 15pt;
+  margin-top: 70px;
+}
+
+div.RMET span.definitions {
+ display: block;
+ clear: both;
+ font-weight: bold;
+}
+
+
+/** Control and label **/
+div.RMET input[type=radio].emotion {
+  display: none;
+}
+
+div.RMET input[type=radio].emotion + label {
+  font-weight: normal;
+  cursor: pointer;
+  width: 150px;
+}
+
+div.RMET input[type=radio].emotion:checked + label {
+  font-weight: bold;
+}
+
+
+/***********************
+ * Emotion-definitions *
+ ***********************/
+
+ div.RMET div.definition {
+   border: 1px solid red;
+   width: 500px;
+
+   text-align: left;
+
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ div.RMET span.sentence {
+   font-style: italic;
+ }

@@ -1,0 +1,6 @@
+{
+  "screens": [
+    { "task": "RMET", "name": "Instructions", "template": "Instructions.html" },
+    { "task": "RMET", "name": "Stimulus", "template": "Stimulus.html" }
+  ]
+}
