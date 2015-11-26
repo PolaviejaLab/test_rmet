@@ -1,0 +1,446 @@
+[
+ {
+  "answer": "apavorado", 
+  "gender": "M", 
+  "image": "RMET_Practise.png", 
+  "id": "Practise", 
+  "options": [
+   "invejoso", 
+   "apavorado", 
+   "arrogante", 
+   "odioso"
+  ]
+ }, 
+ {
+  "answer": "brincalh\u00e3o", 
+  "gender": "M", 
+  "image": "RMET_Face01.png", 
+  "id": "Face01", 
+  "options": [
+   "brincalh\u00e3o", 
+   "reconfortante", 
+   "irritado", 
+   "entediado"
+  ]
+ }, 
+ {
+  "answer": "infeliz", 
+  "gender": "M", 
+  "image": "RMET_Face02.png", 
+  "id": "Face02", 
+  "options": [
+   "aterrorizado", 
+   "infeliz", 
+   "arrogante", 
+   "aborrecido"
+  ]
+ }, 
+ {
+  "answer": "desejoso", 
+  "gender": "F", 
+  "image": "RMET_Face03.png", 
+  "id": "Face03", 
+  "options": [
+   "goz\u00e3o", 
+   "aturdido", 
+   "desejoso", 
+   "convicto"
+  ]
+ }, 
+ {
+  "answer": "insistente", 
+  "gender": "M", 
+  "image": "RMET_Face04.png", 
+  "id": "Face04", 
+  "options": [
+   "goz\u00e3o", 
+   "insistente", 
+   "divertido", 
+   "relaxado"
+  ]
+ }, 
+ {
+  "answer": "angustiado", 
+  "gender": "M", 
+  "image": "RMET_Face05.png", 
+  "id": "Face05", 
+  "options": [
+   "irritado", 
+   "sarc\u00e1stico", 
+   "angustiado", 
+   "amig\u00e1vel"
+  ]
+ }, 
+ {
+  "answer": "sonhador", 
+  "gender": "F", 
+  "image": "RMET_Face06.png", 
+  "id": "Face06", 
+  "options": [
+   "at\u00f3nito", 
+   "sonhador", 
+   "impaciente", 
+   "alarmado"
+  ]
+ }, 
+ {
+  "answer": "desconfort\u00e1vel", 
+  "gender": "M", 
+  "image": "RMET_Face07.png", 
+  "id": "Face07", 
+  "options": [
+   "apolog\u00e9tico", 
+   "amig\u00e1vel", 
+   "desconfort\u00e1vel", 
+   "desalentado"
+  ]
+ }, 
+ {
+  "answer": "desanimado", 
+  "gender": "M", 
+  "image": "RMET_Face08.png", 
+  "id": "Face08", 
+  "options": [
+   "desanimado", 
+   "aliviado", 
+   "t\u00edmido", 
+   "excitado"
+  ]
+ }, 
+ {
+  "answer": "preocupado", 
+  "gender": "F", 
+  "image": "RMET_Face09.png", 
+  "id": "Face09", 
+  "options": [
+   "aborrecido", 
+   "hostil", 
+   "horrorizado", 
+   "preocupado"
+  ]
+ }, 
+ {
+  "answer": "cauteloso", 
+  "gender": "M", 
+  "image": "RMET_Face10.png", 
+  "id": "Face10", 
+  "options": [
+   "cauteloso", 
+   "insistente", 
+   "entediado", 
+   "at\u00f3nito"
+  ]
+ }, 
+ {
+  "answer": "arrependido", 
+  "gender": "M", 
+  "image": "RMET_Face11.png", 
+  "id": "Face11", 
+  "options": [
+   "aterrorizado", 
+   "divertido", 
+   "arrependido", 
+   "galanteador"
+  ]
+ }, 
+ {
+  "answer": "c\u00e9tico", 
+  "gender": "M", 
+  "image": "RMET_Face12.png", 
+  "id": "Face12", 
+  "options": [
+   "indiferente", 
+   "embara\u00e7ado", 
+   "c\u00e9tico", 
+   "desalentado"
+  ]
+ }, 
+ {
+  "answer": "expectante", 
+  "gender": "M", 
+  "image": "RMET_Face13.png", 
+  "id": "Face13", 
+  "options": [
+   "decidido", 
+   "expectante", 
+   "amea\u00e7ador", 
+   "t\u00edmido"
+  ]
+ }, 
+ {
+  "answer": "acusat\u00f3rio", 
+  "gender": "M", 
+  "image": "RMET_Face14.png", 
+  "id": "Face14", 
+  "options": [
+   "irritado", 
+   "desapontado", 
+   "deprimido", 
+   "acusat\u00f3rio"
+  ]
+ }, 
+ {
+  "answer": "contemplativo", 
+  "gender": "F", 
+  "image": "RMET_Face15.png", 
+  "id": "Face15", 
+  "options": [
+   "contemplativo", 
+   "aturdido", 
+   "encorajador", 
+   "divertido"
+  ]
+ }, 
+ {
+  "answer": "pensativo", 
+  "gender": "M", 
+  "image": "RMET_Face16.png", 
+  "id": "Face16", 
+  "options": [
+   "irritado", 
+   "pensativo", 
+   "encorajador", 
+   "emp\u00e1tico"
+  ]
+ }, 
+ {
+  "answer": "duvidoso", 
+  "gender": "F", 
+  "image": "RMET_Face17.png", 
+  "id": "Face17", 
+  "options": [
+   "duvidoso", 
+   "afetuoso", 
+   "brincalh\u00e3o", 
+   "at\u00f3nito"
+  ]
+ }, 
+ {
+  "answer": "decidido", 
+  "gender": "F", 
+  "image": "RMET_Face18.png", 
+  "id": "Face18", 
+  "options": [
+   "decidido", 
+   "divertido", 
+   "at\u00f3nito", 
+   "entediado"
+  ]
+ }, 
+ {
+  "answer": "hesitante", 
+  "gender": "F", 
+  "image": "RMET_Face19.png", 
+  "id": "Face19", 
+  "options": [
+   "arrogante", 
+   "grato", 
+   "sarc\u00e1stico", 
+   "hesitante"
+  ]
+ }, 
+ {
+  "answer": "amig\u00e1vel", 
+  "gender": "M", 
+  "image": "RMET_Face20.png", 
+  "id": "Face20", 
+  "options": [
+   "dominador", 
+   "amig\u00e1vel", 
+   "culpado", 
+   "horrorizado"
+  ]
+ }, 
+ {
+  "answer": "sonhador", 
+  "gender": "F", 
+  "image": "RMET_Face21.png", 
+  "id": "Face21", 
+  "options": [
+   "embara\u00e7ado", 
+   "sonhador", 
+   "confuso", 
+   "apavorado"
+  ]
+ }, 
+ {
+  "answer": "preocupado", 
+  "gender": "F", 
+  "image": "RMET_Face22.png", 
+  "id": "Face22", 
+  "options": [
+   "preocupado", 
+   "grato", 
+   "insistente", 
+   "implorativo"
+  ]
+ }, 
+ {
+  "answer": "desafiador", 
+  "gender": "M", 
+  "image": "RMET_Face23.png", 
+  "id": "Face23", 
+  "options": [
+   "contente", 
+   "apolog\u00e9tico", 
+   "desafiador", 
+   "curioso"
+  ]
+ }, 
+ {
+  "answer": "absorto", 
+  "gender": "M", 
+  "image": "RMET_Face24.png", 
+  "id": "Face24", 
+  "options": [
+   "absorto", 
+   "irritado", 
+   "excitado", 
+   "hostil"
+  ]
+ }, 
+ {
+  "answer": "interessado", 
+  "gender": "F", 
+  "image": "RMET_Face25.png", 
+  "id": "Face25", 
+  "options": [
+   "apavorado", 
+   "incr\u00e9dulo", 
+   "desanimado", 
+   "interessado"
+  ]
+ }, 
+ {
+  "answer": "hostil", 
+  "gender": "M", 
+  "image": "RMET_Face26.png", 
+  "id": "Face26", 
+  "options": [
+   "alarmado", 
+   "t\u00edmido", 
+   "hostil", 
+   "ansioso"
+  ]
+ }, 
+ {
+  "answer": "cauteloso", 
+  "gender": "F", 
+  "image": "RMET_Face27.png", 
+  "id": "Face27", 
+  "options": [
+   "goz\u00e3o", 
+   "cauteloso", 
+   "arrogante", 
+   "tranquilizador"
+  ]
+ }, 
+ {
+  "answer": "interessado", 
+  "gender": "F", 
+  "image": "RMET_Face28.png", 
+  "id": "Face28", 
+  "options": [
+   "interessado", 
+   "goz\u00e3o", 
+   "afetuoso", 
+   "contente"
+  ]
+ }, 
+ {
+  "answer": "refletivo", 
+  "gender": "F", 
+  "image": "RMET_Face29.png", 
+  "id": "Face29", 
+  "options": [
+   "impaciente", 
+   "at\u00f3nito", 
+   "irritado", 
+   "refletivo"
+  ]
+ }, 
+ {
+  "answer": "galanteador", 
+  "gender": "F", 
+  "image": "RMET_Face30.png", 
+  "id": "Face30", 
+  "options": [
+   "grato", 
+   "galanteador", 
+   "hostil", 
+   "desapontado"
+  ]
+ }, 
+ {
+  "answer": "confiante", 
+  "gender": "F", 
+  "image": "RMET_Face31.png", 
+  "id": "Face31", 
+  "options": [
+   "envergonhado", 
+   "confiante", 
+   "goz\u00e3o", 
+   "desalentado"
+  ]
+ }, 
+ {
+  "answer": "s\u00e9rio", 
+  "gender": "M", 
+  "image": "RMET_Face32.png", 
+  "id": "Face32", 
+  "options": [
+   "s\u00e9rio", 
+   "envergonhado", 
+   "desnorteado", 
+   "alarmado"
+  ]
+ }, 
+ {
+  "answer": "apreensivo", 
+  "gender": "M", 
+  "image": "RMET_Face33.png", 
+  "id": "Face33", 
+  "options": [
+   "embara\u00e7ado", 
+   "culpado", 
+   "sonhador", 
+   "apreensivo"
+  ]
+ }, 
+ {
+  "answer": "desconfiado", 
+  "gender": "F", 
+  "image": "RMET_Face34.png", 
+  "id": "Face34", 
+  "options": [
+   "at\u00f3nito", 
+   "confundido", 
+   "desconfiado", 
+   "aterrorizado"
+  ]
+ }, 
+ {
+  "answer": "nervoso", 
+  "gender": "F", 
+  "image": "RMET_Face35.png", 
+  "id": "Face35", 
+  "options": [
+   "cismado", 
+   "nervoso", 
+   "insistente", 
+   "contemplativo"
+  ]
+ }, 
+ {
+  "answer": "suspeitoso", 
+  "gender": "M", 
+  "image": "RMET_Face36.png", 
+  "id": "Face36", 
+  "options": [
+   "envergonhado", 
+   "nervoso", 
+   "suspeitoso", 
+   "indeciso"
+  ]
+ }
+]

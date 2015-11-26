@@ -1,0 +1,467 @@
+{
+ "suspeitoso": {
+  "emotion": "SUSPEITOSO", 
+  "description": "Duvidoso.", 
+  "sentence": "Depois do Samuel ter perdido a carteira pela segunda vez no local de trabalho, suspeito que um dos seus colegas a tivesse roubado."
+ }, 
+ "confiante": {
+  "emotion": "CONFIANTE", 
+  "description": "Acreditar em si mesmo.", 
+  "sentence": "O tenista estava muito confiante da sua vit\u00f3ria no jogo."
+ }, 
+ "desalentado": {
+  "emotion": "DESALENTADO", 
+  "description": "Desencorajado, em baixo.", 
+  "sentence": "O Andr\u00e9 ficou desalentado quando chumbou nos exames."
+ }, 
+ "emp\u00e1tico": {
+  "emotion": "EMP\u00c1TICO", 
+  "description": "Gentil.", 
+  "sentence": "A enfermeira olhava empaticamente para o paciente enquanto lhe dizia as m\u00e1s not\u00edcias."
+ }, 
+ "pensativo": {
+  "emotion": "PENSATIVO", 
+  "description": "Refletivo.", 
+  "sentence": "O Filipe estava pensativo enquanto planeava como terminar a sua rela\u00e7\u00e3o com a namorada."
+ }, 
+ "cismado": {
+  "emotion": "CISMADO", 
+  "description": "Preocupado, confuso.", 
+  "sentence": "Depois de fazer as palavras cruzadas durante uma hora, a Beatriz estava cismada com uma pista."
+ }, 
+ "confundido": {
+  "emotion": "CONFUNDIDO", 
+  "description": "Desconcertado, confuso.", 
+  "sentence": "Os detetives ficaram completamente confundidos com o caso de homic\u00eddio."
+ }, 
+ "indiferente": {
+  "emotion": "INDIFERENTE", 
+  "description": "Desinteressado, sem resposta, que n\u00e3o se importa.", 
+  "sentence": "Ao Fernando era-lhe completamente indiferente irem ao cinema ou a um bar."
+ }, 
+ "perplexo": {
+  "emotion": "PERPLEXO", 
+  "description": "Confuso, intrigado", 
+  "sentence": "O F\u00e1bio estava perplexo com o desaparecimento dos gnomos do seu jardim."
+ }, 
+ "envergonhado": {
+  "emotion": "ENVERGONHADO", 
+  "description": "Sentir-se com vergonha ou culpa, embara\u00e7ado.", 
+  "sentence": "O rapaz sentiu-se envergonhado quando a sua m\u00e3e descobriu que ele tinha roubado dinheiro da sua carteira."
+ }, 
+ "refletivo": {
+  "emotion": "REFLETIVO", 
+  "description": "Contemplativo, pensativo.", 
+  "sentence": "O Jorge refletia sobre o que tinha feito com a sua vida."
+ }, 
+ "hesitante": {
+  "emotion": "HESITANTE", 
+  "description": "Incerto, cauteloso.", 
+  "sentence": "O Jo\u00e3o sentiu-se um pouco hesitante quando entrou na sala cheia de estranhos."
+ }, 
+ "desapontado": {
+  "emotion": "DESAPONTADO", 
+  "description": "Descontente, insatisfeito.", 
+  "sentence": "Os adeptos do Sporting ficaram desapontados por perderem o campeonato."
+ }, 
+ "galanteador": {
+  "emotion": "GALANTEADOR", 
+  "description": "Sedutor, atrevido, provocante.", 
+  "sentence": "A Andreia foi acusada de ser galanteadora quando piscou o olho a um estranho numa festa."
+ }, 
+ "arrependido": {
+  "emotion": "ARREPENDIDO", 
+  "description": "Lamentoso.", 
+  "sentence": "A Catarina estava arrependida de nunca ter viajado muito quando era jovem."
+ }, 
+ "contemplativo": {
+  "emotion": "CONTEMPLATIVO", 
+  "description": "Reflexivo, pensativo.", 
+  "sentence": "O Jo\u00e3o estava com um humor contemplativo na v\u00e9spera do seu 60\u00ba anivers\u00e1rio"
+ }, 
+ "at\u00f3nito": {
+  "emotion": "AT\u00d3NITO", 
+  "description": "Horrorizado, alarmado.", 
+  "sentence": "A Maria ficou at\u00f3nita quando descobriu que a sua casa tinha sido assaltada."
+ }, 
+ "deprimido": {
+  "emotion": "DEPRIMIDO", 
+  "description": "Miser\u00e1vel.", 
+  "sentence": "O Jorge ficou deprimido por n\u00e3o receber nenhum postal de anivers\u00e1rio."
+ }, 
+ "hostil": {
+  "emotion": "HOSTIL", 
+  "description": "Antip\u00e1tico.", 
+  "sentence": "Os dois vizinhos eram hostis um com o outro devido a uma zanga pr\u00e9via sobre m\u00fasica alta."
+ }, 
+ "desnorteado": {
+  "emotion": "DESNORTEADO", 
+  "description": "Totalmente confuso, perplexo, aturdido.", 
+  "sentence": "A crian\u00e7a estava desnorteada na sua visita \u00e0 grande cidade pela primeira vez."
+ }, 
+ "d\u00fabio": {
+  "emotion": "D\u00daBIO", 
+  "description": "Duvidoso, question\u00e1vel.", 
+  "sentence": "O Pedro achou d\u00fabia a proposta de lhe venderem uma televis\u00e3o muito barata num bar."
+ }, 
+ "desanimado": {
+  "emotion": "DESANIMADO", 
+  "description": "Triste, desesperado, sem esperan\u00e7a.", 
+  "sentence": "O Miguel ficou desanimado quando n\u00e3o conseguiu o emprego que queria."
+ }, 
+ "entretido": {
+  "emotion": "ENTRETIDO", 
+  "description": "Divertido ou agradado por algo.", 
+  "sentence": "Eu estava muito entretido pelo m\u00e1gico."
+ }, 
+ "expectante": {
+  "emotion": "EXPECTANTE", 
+  "description": "\u00c0 espera.", 
+  "sentence": "No in\u00edcio do jogo de futebol, os f\u00e3s estavam expectantes por um golo r\u00e1pido."
+ }, 
+ "duvidoso": {
+  "emotion": "DUVIDOSO", 
+  "description": "D\u00fabio, suspeito, que n\u00e3o est\u00e1 realmente a acreditar.", 
+  "sentence": "A Maria duvidou que o seu filho lhe estava a dizer a verdade."
+ }, 
+ "interessado": {
+  "emotion": "INTERESSADO", 
+  "description": "Inquisidor, curioso.", 
+  "sentence": "Depois de ver o Jurassic Park, o Hugo ficou muito interessado em dinossauros."
+ }, 
+ "afetuoso": {
+  "emotion": "AFETUOSO", 
+  "description": "Mostrar carinho a algu\u00e9m.", 
+  "sentence": "Muitas m\u00e3es s\u00e3o afetuosas com os seus beb\u00e9s, dando-lhes muitos beijos e abra\u00e7os."
+ }, 
+ "aliviado": {
+  "emotion": "ALIVIADO", 
+  "description": "Sem preocupa\u00e7\u00f5es ou ansiedade.", 
+  "sentence": "No restaurante, o Rui ficou aliviado por descobrir que n\u00e3o se tinha esquecido da carteira."
+ }, 
+ "entusiasmado": {
+  "emotion": "ENTUSIASMADO", 
+  "description": "Empolgado, animado.", 
+  "sentence": "A Mariana estava entusiasmada com o seu plano de dieta."
+ }, 
+ "insistente": {
+  "emotion": "INSISTENTE", 
+  "description": "Exigente, persistente.", 
+  "sentence": "Depois de um passeio de trabalho, o Renato insistiu em pagar a conta."
+ }, 
+ "honesto": {
+  "emotion": "HONESTO", 
+  "description": "Ter uma inten\u00e7\u00e3o s\u00e9ria.", 
+  "sentence": "O Henrique \u00e9 muito honesto no que diz respeito \u00e0s suas cren\u00e7as religiosas."
+ }, 
+ "desejoso": {
+  "emotion": "DESEJOSO", 
+  "description": "Paix\u00e3o, lux\u00faria, anseio.", 
+  "sentence": "A C\u00e1tia teve um forte desejo por chocolate."
+ }, 
+ "aturdido": {
+  "emotion": "ATURDIDO", 
+  "description": "Confuso, nervoso e aborrecido.", 
+  "sentence": "A Marta ficou aturdida quando percebeu que estava atrasada para a reuni\u00e3o e se tinha esquecido de um documento importante."
+ }, 
+ "ansioso": {
+  "emotion": "ANSIOSO", 
+  "description": "Preocupado, tenso, desconfort\u00e1vel.", 
+  "sentence": "O estudante estava a sentir-se ansioso antes dos exames finais."
+ }, 
+ "nervoso": {
+  "emotion": "NERVOSO", 
+  "description": "Apreensivo, tenso, preocupado.", 
+  "sentence": "A Alice sentiu-se muito nervosa pouco antes da sua entrevista de emprego."
+ }, 
+ "cauteloso": {
+  "emotion": "CAUTELOSO", 
+  "description": "Reticente, desconfiado.", 
+  "sentence": "A Sara era sempre cautelosa quando falava com pessoas que n\u00e3o conheci."
+ }, 
+ "implorativo": {
+  "emotion": "IMPLORATIVO", 
+  "description": "Pedir insistentemente, suplicar.", 
+  "sentence": "A Francisca implorava ao pai, tentando persuadi-lo a emprestar-lhe o carro."
+ }, 
+ "deliberante": {
+  "emotion": "DELIBERANTE", 
+  "description": "A decidir.", 
+  "sentence": "O homem estava a deliberar em quem votar na elei\u00e7\u00e3o."
+ }, 
+ "ofendido": {
+  "emotion": "OFENDIDO", 
+  "description": "Insultado, magoado, ter m\u00e1goa.", 
+  "sentence": "Quando algu\u00e9m faz uma piada acerca do seu peso, a Marta sente-se muito ofendida."
+ }, 
+ "assertivo": {
+  "emotion": "ASSERTIVO", 
+  "description": "Confiante, seguro de si mesmo.", 
+  "sentence": "A mulher assertivamente exigiu que a loja lhe desse um reembolso."
+ }, 
+ "apreensivo": {
+  "emotion": "APREENSIVO", 
+  "description": "Alarmado, perturbado.", 
+  "sentence": "O m\u00e9dico ficou apreensivo quando o doente piorou."
+ }, 
+ "embara\u00e7ado": {
+  "emotion": "EMBARA\u00c7ADO", 
+  "description": "Constrangido, envergonhado", 
+  "sentence": "A Paula sentiu-se embara\u00e7ada por se ter esquecido do nome do colega."
+ }, 
+ "dominador": {
+  "emotion": "DOMINADOR", 
+  "description": "Mand\u00e3o.", 
+  "sentence": "O sargento tinha um ar dominador enquanto inspecionava os recrutas."
+ }, 
+ "sonhador": {
+  "emotion": "SONHADOR", 
+  "description": "Sonhar acordado, imaginar.", 
+  "sentence": "A Isabel sonhava ser uma estrela de cinema."
+ }, 
+ "satisfeito": {
+  "emotion": "SATISFEITO", 
+  "description": "Contente, realizado.", 
+  "sentence": "O Esteves sentiu-se muito satisfeito depois de ter comprado o novo apartamento tal como ele o queria."
+ }, 
+ "esperan\u00e7oso": {
+  "emotion": "ESPERAN\u00c7OSO", 
+  "description": "Otimista.", 
+  "sentence": "O Ant\u00f3nio estava esperan\u00e7oso que a carta lhe trouxesse boas not\u00edcias."
+ }, 
+ "preocupado": {
+  "emotion": "PREOCUPADO", 
+  "description": "Absorto, absorvido pelos seus pr\u00f3prios pensamentos.", 
+  "sentence": "A Ana estava preocupada, durante o trabalho, com a doen\u00e7a da m\u00e3e."
+ }, 
+ "desafiador": {
+  "emotion": "DESAFIADOR", 
+  "description": "Insolente, provocador, que n\u00e3o quer saber o que os outros pensam.", 
+  "sentence": "O animal permaneceu desafiador mesmo depois de ser preso."
+ }, 
+ "apolog\u00e9tico": {
+  "emotion": "APOLOG\u00c9TICO", 
+  "description": "Pesaroso, culpado.", 
+  "sentence": "O empregado estava muito apolog\u00e9tico depois de ter entornado a sopa sobre o cliente."
+ }, 
+ "confuso": {
+  "emotion": "CONFUSO", 
+  "description": "Desorientado, perplexo.", 
+  "sentence": "A Lu\u00edsa ficou t\u00e3o confusa com as instru\u00e7\u00f5es que lhe deram, que se perdeu."
+ }, 
+ "s\u00e9rio": {
+  "emotion": "S\u00c9RIO", 
+  "description": "Solene.", 
+  "sentence": "O gerente do banco olhava s\u00e9rio para o Manuel, enquanto lhe recusava a autoriza\u00e7\u00e3o para um levantamento a descoberto."
+ }, 
+ "amea\u00e7ador": {
+  "emotion": "AMEA\u00c7ADOR", 
+  "description": "Intimidante.", 
+  "sentence": "O homem alcoolizado estava a agir de forma muito amea\u00e7adora."
+ }, 
+ "irritado": {
+  "emotion": "IRRITADO", 
+  "description": "Exasperado, aborrecido.", 
+  "sentence": "A Alda ficou muito irritada com todo o lixo eletr\u00f3nico que recebeu."
+ }, 
+ "desconfiado": {
+  "emotion": "DESCONFIADO", 
+  "description": "Suspeito, duvidoso.", 
+  "sentence": "A idosa ficou desconfiada do estranho \u00e0 sua porta."
+ }, 
+ "c\u00e9tico": {
+  "emotion": "C\u00c9TICO", 
+  "description": "Em d\u00favida, suspeito, n\u00e3o confi\u00e1vel.", 
+  "sentence": "O Pedro mostrou-se c\u00e9tico quando algu\u00e9m lhe leu o seu hor\u00f3scopo."
+ }, 
+ "curioso": {
+  "emotion": "CURIOSO", 
+  "description": "Inquisitivo, que deseja saber.", 
+  "sentence": "A Margarida estava curiosa quanto ao formato da embalagem."
+ }, 
+ "decidido": {
+  "emotion": "DECIDIDO", 
+  "description": "Que j\u00e1 decidiu.", 
+  "sentence": "A Joana parecia muito decidida quando entrou na assembleia de voto."
+ }, 
+ "divertido": {
+  "emotion": "DIVERTIDO", 
+  "description": "Achar que algo \u00e9 engra\u00e7ado.", 
+  "sentence": "Eu diverti-me com uma piada engra\u00e7ada que algu\u00e9m me contou."
+ }, 
+ "animado": {
+  "emotion": "ANIMADO", 
+  "description": "Desejoso.", 
+  "sentence": "Na noite de Natal, as crian\u00e7as est\u00e3o animadas com a perspetiva de abrir as prendas."
+ }, 
+ "apavorado": {
+  "emotion": "APAVORADO", 
+  "description": "Perturbado, sensa\u00e7\u00e3o de terror ou ansiedade.", 
+  "sentence": "Ao acordar com a casa em chamas, a fam\u00edlia inteira ficou apavorada."
+ }, 
+ "tranquilizador": {
+  "emotion": "TRANQUILIZADOR", 
+  "description": "Apoiar, encorajar, dar a algu\u00e9m confian\u00e7a.", 
+  "sentence": "O Andr\u00e9 tentou mostrar-se tranquilizador quando disse \u00e0 sua mulher que o seu novo vestido lhe ficava bem."
+ }, 
+ "indeciso": {
+  "emotion": "INDECISO", 
+  "description": "Inseguro, hesitante, incapaz de se decidir.", 
+  "sentence": "A F\u00e1tima era t\u00e3o indecisa que n\u00e3o conseguia sequer decidir o que comer ao almo\u00e7o."
+ }, 
+ "angustiado": {
+  "emotion": "ANGUSTIADO", 
+  "description": "Ansioso, inquieto, perturbado.", 
+  "sentence": "Quando o seu gato desapareceu, a rapariga ficou muito angustiada."
+ }, 
+ "brincalh\u00e3o": {
+  "emotion": "BRINCALH\u00c3O", 
+  "description": "Alegre.", 
+  "sentence": "O Henrique estava brincalh\u00e3o na sua festa de anivers\u00e1rio."
+ }, 
+ "grato": {
+  "emotion": "GRATO", 
+  "description": "Agradecido.", 
+  "sentence": "A Helena estava grata pela gentileza do estranho."
+ }, 
+ "relaxado": {
+  "emotion": "RELAXADO", 
+  "description": "Calmo, despreocupado.", 
+  "sentence": "De f\u00e9rias a Pamela sentia-se feliz e relaxada."
+ }, 
+ "acusat\u00f3rio": {
+  "emotion": "ACUSAT\u00d3RIO", 
+  "description": "Culpar.", 
+  "sentence": "O pol\u00edcia estava a acusar o homem de ter roubado a carteira."
+ }, 
+ "infeliz": {
+  "emotion": "INFELIZ", 
+  "description": "Triste.", 
+  "sentence": "O homem ficou infeliz quando soube que a sua m\u00e3e tinha morrido."
+ }, 
+ "sarc\u00e1stico": {
+  "emotion": "SARC\u00c1STICO", 
+  "description": "C\u00ednico, a desprezar.", 
+  "sentence": "O comediante fez um coment\u00e1rio sarc\u00e1stico quando algu\u00e9m chegou tarde ao teatro."
+ }, 
+ "horrorizado": {
+  "emotion": "HORRORIZADO", 
+  "description": "Apavorado, chocado.", 
+  "sentence": "O homem estava horrorizado por descobrir que a sua nova mulher j\u00e1 era casada."
+ }, 
+ "intrigado": {
+  "emotion": "INTRIGADO", 
+  "description": "Muito curioso, muito interessado.", 
+  "sentence": "Um telefonema misterioso intrigou a Joana."
+ }, 
+ "alarmado": {
+  "emotion": "ALARMADO", 
+  "description": "Temeroso, preocupado, com ansiedade.", 
+  "sentence": "A Clara ficou alarmada quando pensou que algu\u00e9m a estava a seguir at\u00e9 casa."
+ }, 
+ "contente": {
+  "emotion": "CONTENTE", 
+  "description": "Satisfeito.", 
+  "sentence": "Depois de um passeio agrad\u00e1vel e de uma boa refei\u00e7\u00e3o, o David sentiu-se muito contente."
+ }, 
+ "incr\u00e9dulo": {
+  "emotion": "INCR\u00c9DULO", 
+  "description": "Que n\u00e3o acredita.", 
+  "sentence": "O Sim\u00e3o ficou incr\u00e9dulo quando ouviu que tinha ganho a lotaria."
+ }, 
+ "amedrontado": {
+  "emotion": "AMEDRONTADO", 
+  "description": "Aterrorizado, preocupado.", 
+  "sentence": "Nas ruas escuras, as mulheres sentem-se amedrontadas."
+ }, 
+ "absorto": {
+  "emotion": "ABSORTO", 
+  "description": "Pensativo.", 
+  "sentence": "A S\u00f3nia estava absorta no caminho para o primeiro encontro com os pais do seu namorado."
+ }, 
+ "ressentido": {
+  "emotion": "RESSENTIDO", 
+  "description": "Amargo, hostil.", 
+  "sentence": "O empres\u00e1rio ficou ressentido por um colega de trabalho mais novo ter sido promovido antes dele."
+ }, 
+ "invejoso": {
+  "emotion": "INVEJOSO", 
+  "description": "Querer o que os outros t\u00eam.", 
+  "sentence": "O F\u00e1bio tinha inveja de todos os rapazes mais altos e bonitos da sua turma."
+ }, 
+ "arrogante": {
+  "emotion": "ARROGANTE", 
+  "description": "Vaidoso, prepotente, empertigado, ter-se em grande considera\u00e7\u00e3o.", 
+  "sentence": "O homem arrogante pensava que percebia mais de pol\u00edtica do que todas as pessoas na sala."
+ }, 
+ "desconfort\u00e1vel": {
+  "emotion": "DESCONFORT\u00c1VEL", 
+  "description": "Inquieto, apreensivo, perturbado.", 
+  "sentence": "A Catarina sentiu-se ligeiramente desconfort\u00e1vel ao aceitar boleia de um homem que tinha acabado de conhecer."
+ }, 
+ "aterrorizado": {
+  "emotion": "ATERRORIZADO", 
+  "description": "Alarmado, com medo.", 
+  "sentence": "O rapaz ficou aterrorizado quando pensou ter visto um fantasma."
+ }, 
+ "odioso": {
+  "emotion": "ODIOSO", 
+  "description": "Mostrar intensa avers\u00e3o, detest\u00e1vel.", 
+  "sentence": "As duas irm\u00e3s odiavam-se uma \u00e0 outra e estavam sempre a discutir."
+ }, 
+ "encorajador": {
+  "emotion": "ENCORAJADOR", 
+  "description": "Incentivador.", 
+  "sentence": "Todos os pais encorajavam os seus filhos no dia escolar do desporto."
+ }, 
+ "goz\u00e3o": {
+  "emotion": "GOZ\u00c3O", 
+  "description": "Ser engra\u00e7ado, brincalh\u00e3o.", 
+  "sentence": "O Frederico estava sempre a gozar com os seus amigos."
+ }, 
+ "aborrecido": {
+  "emotion": "ABORRECIDO", 
+  "description": "Irritado. Descontente.", 
+  "sentence": "O Manuel ficou aborrecido quando percebeu que perdeu o \u00faltimo autocarro para casa."
+ }, 
+ "convicto": {
+  "emotion": "CONVICTO", 
+  "description": "Ter a certeza de, seguro, convencido.", 
+  "sentence": "O Ricardo estava convicto de que tinha chegado \u00e0 decis\u00e3o correta."
+ }, 
+ "fascinado": {
+  "emotion": "FASCINADO", 
+  "description": "Cativado, muito interessado.", 
+  "sentence": "\u00c0 beira mar, as crian\u00e7as estavam fascinadas com as criaturas nas pedras."
+ }, 
+ "amig\u00e1vel": {
+  "emotion": "AMIG\u00c1VEL", 
+  "description": "Soci\u00e1vel, am\u00e1vel.", 
+  "sentence": "A rapariga amig\u00e1vel mostrou aos turistas o caminho para o centro da cidade."
+ }, 
+ "insultuoso": {
+  "emotion": "INSULTUOSO", 
+  "description": "Rude, ofensivo.", 
+  "sentence": "A claque de futebol estava a insultar o \u00e1rbitro depois de este assinalar um penalti."
+ }, 
+ "impaciente": {
+  "emotion": "IMPACIENTE", 
+  "description": "Inquieto, \u00e0 espera que algo aconte\u00e7a em breve.", 
+  "sentence": "A In\u00eas foi ficando cada vez mais impaciente enquanto esperava pelo seu amigo que j\u00e1 estava 20 minutos atrasado."
+ }, 
+ "reconfortante": {
+  "emotion": "RECONFORTANTE", 
+  "description": "Compreensivo, compassivo.", 
+  "sentence": "A enfermeira reconfortava o soldado ferido."
+ }, 
+ "austero": {
+  "emotion": "AUSTERO", 
+  "description": "Severo, rigoroso, firme.", 
+  "sentence": "O professor estava com um ar austero enquanto chamava a turma \u00e0 aten\u00e7\u00e3o."
+ }, 
+ "culpado": {
+  "emotion": "CULPADO", 
+  "description": "Sentir-se arrependido por fazer algo errado.", 
+  "sentence": "O Carlos sentiu-se culpado por ter tido um caso extraconjugal."
+ }
+}
