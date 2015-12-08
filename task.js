@@ -1,7 +1,104 @@
+/**
+ * Reading the mind in the eyes test
+ * 
+ * This test can be used in two modes:
+ *   - Standalone
+ *   - In a group
+ * 
+ * Group mode
+ * ----------
+ * 
+ * When performing this test in a group, it will
+ * display the current trial (eyes) on a central
+ * screen and allows peripheral devices (e.g. tablets)
+ * to give the responses.
+ * 
+ * Communication
+ * -------------
+ * 
+ * Communication between the central and peripheral
+ * devices will occur over a messaging channel named
+ * after the group. For example if the ParticipantID is
+ * MyGroup_MyName_T1, then MyGroup will be the channel.
+ * 
+ * JSON messages are exchanged to coordinate the devices.  
+ * Messages must have the following field:
+ * 
+ *   task: "RMETc" for central or "RMETp" for peripheral
+ *   withinGroupId: "" for central or "T1" .. "T3" for peripheral
+ *   trial: Number of the current trial
+ *   status: See below
+ * 
+ * The status field can have the following values:
+ *   "complete": Central computer signals start of next trial
+ *               Peripheral devices signal completion of trial
+ *   "waiting": Central computer signals it is ready
+ *              Peripheral devices are waiting for participant
+ * 
+ * Storage
+ * -------
+ * 
+ * The trial results will be stored under key "RMET.[TrialNr]".
+ * 
+ * In case of the central computer, the list of devices that
+ * have finished the trial is available under key 
+ * "RMET.Central.[TrialNr].Ready".
+ * 
+ * In case of the peripheral devices, whether the answer is final
+ * will be recorded under "RMET.Peripheral.[TrialNr].IsFinal".
+ */
+
 
 experimentFrontendControllers.controller('RMET', ['$scope', '$http', '$cookies', '$controller',
   function($scope, $http, $cookies, $controller)
   {
+    // Constants that represent modes
+    $scope.Mode_Individual = 0;
+    $scope.Mode_Central = 1;
+    $scope.Mode_Peripheral = 2;
+    
+    
+    /**
+     * Returns currently active mode
+     */
+    function get_mode()
+    {
+      var modeStrings = {};
+      modeStrings[$scope.Mode_Individual] = "individual"; 
+      modeStrings[$scope.Mode_Central] = "central"; 
+      modeStrings[$scope.Mode_Peripheral] = "peripheral";
+
+      // Default to individual
+      if(!("mode" in $scope.screen.options))
+        return $scope.Mode_Individual;
+
+      // Look for role in roleStrings array
+      for(var key in modeStrings) {
+        if($scope.screen.options['mode'] == modeStrings[key])
+          return key;
+      }
+      
+      // No role found
+      return $scope.Mode_Individual;
+    }
+    
+    
+    /**
+     * Extract parts from participantId
+     */
+    function extract_participant_id()
+    {
+      var participantId = $scope.responses['ParticipantID'];
+      var parts = participantId.split("_")
+      
+      $scope.groupId = parts[0];
+            
+      if(parts.length >= 2)
+        $scope.withinGroupId = parts[2];        
+    }
+    
+    
+    
     $scope.resources = $scope.screen.root;
     $scope.prefix += "RMET.";
 
@@ -14,16 +111,28 @@ experimentFrontendControllers.controller('RMET', ['$scope', '$http', '$cookies',
     $scope.descriptions = {};
 
 
-    /** Determine the mode of the RMET task **/
-    if("mode" in $scope.screen.options) {
-      $scope.mode = $scope.screen.options['mode'];
-      
-      // Invalid mode specified
-      if(!($scope.mode in ["individual", "tablet", "group"]))
-        $scope.mode = "individual";      
-    } else {
-      $scope.mode = "individual";
-    }
+    // Split participant id into parts
+    extract_participant_id();
+    
+
+    /**
+     * Setup messaging channel
+     */
+    var Channel = Messaging.subscribe($scope.groupId);
+    
+    Channel
+      .filter(function(msg) { return msg.task == "RMETt" && msg.status == "complete" })
+      .subscribe(function(msg) { }); // Mark mask.trial as complete for msg.withinGroupId
+    
+    // Send status
+    Channel
+      .filter(function(msg) { return msg.task == "RMETg" && msg.status == "waiting" })
+      .subscribe(function(msg) { }); 
+
+    // Move to next stimulus
+    Channel
+      .filter(function(msg) { return msg.task == "RMETg" && msg.status == "complete" })
+      .subscribe(function(msg) { $scope.next(); });
 
 
     /**
@@ -118,16 +227,21 @@ experimentFrontendControllers.controller('RMET', ['$scope', '$http', '$cookies',
     {
       $scope.responses[ $scope.prefix + 'Page' ] = trial;
       $scope.trial = $scope.trials[$scope.get_trial()];
+            
+      var canvasId = "image";
+      var canvas = document.getElementById(canvasId);
       
-      var canvas = document.getElementById("image");
-      
-      if(canvas === undefined)
+      if(canvas === null) {
+        console.log("Could not find canvas element with id", canvasId);        
         return false;
+      }
       
       var context = canvas.getContext("2d");
       
-      if(context === undefined)
+      if(context === null) {
+        console.log("Unable to obtain context for canvas with id", canvasId);
         return false;
+      }
 
       context.drawImage($scope.trial.image, 0, 0, canvas.clientWidth, canvas.clientHeight);
       
@@ -147,51 +261,45 @@ experimentFrontendControllers.controller('RMET', ['$scope', '$http', '$cookies',
       return parseInt(trial);
     }
 
+
+    /**
+     * Load list of descriptions from server
+     */
+    var get_descriptions = function(resources, language)
+    {
+      if(language == undefined)
+        language = 'en';
+      
+      return Rx.Observable.fromPromise($http.get(resources + 'Data/Descriptions.' + language + '.json'))
+        .map(function(reply) { return reply.data } );        
+    }
+
         
     /**
      * Load stimuli and call oncomplete callback
      */
-    $scope.load_stimuli = function(complete_callback)
+    var get_stimuli = function(resources, language)
     {
-      return new Promise(function(resolve, reject)
-      {
-        $http.get($scope.resources + 'Data/Stimuli.json').
-            success(function (data, status) {
-            
-              var itemsLeft = data.length;
-            
-              // Preload all images           
-              for(var i in data) {
-                var path = $scope.resources + 'Faces/' + data[i].image;
-                              
-                data[i].image = new Image();              
-                data[i].image.onload = function() {
-                  itemsLeft--;
-                  
-                  if(itemsLeft == 0)
-                    resolve();
-                }.bind(this);
-                
-                data[i].image.onerror = function() { reject(); };              
-                data[i].image.src = path;
-              }
-              
-              // Add trials to scope
-              $scope.trials = data;
-              $scope.trial = data[$scope.get_trial()];          
-            });
-      }.bind(this));
+      if(language == undefined)
+        language = 'en';
+      
+      return Rx.Observable.fromPromise($http.get(resources + 'Data/Stimuli.' + language + '.json'))
+        .map(function(reply) { return reply.data } )
+        .flatMap(function(reply) { return Rx.Observable.fromArray(reply); })
+
+        // Load images
+        .flatMap(function(trial) {          
+          var path = resources + 'Faces/' + trial.image;
+          
+          return Rx.Observable.create(function(observer) {
+            trial.image = new Image();
+            trial.image.onload = function() { observer.onNext(trial); observer.onCompleted(); };
+            trial.image.onerror = function(error) { observer.onError(error); };
+            trial.image.src = path;              
+          });        
+        });
     }
     
-
-    /**
-     * Populate list of definitions
-     */
-    $http.get($scope.resources + 'Data/Descriptions.json').
-      success(function (data, status) {
-        $scope.descriptions = data;
-      });
-
 
     /**
      * Keeps track of when a user requests the definition of an emotion
@@ -264,10 +372,22 @@ experimentFrontendControllers.controller('RMET', ['$scope', '$http', '$cookies',
     
     
     /**
-     * Load stimuli and mark them as loaded
+     * Populate list of definitions
      */
-    $scope.load_stimuli().then(function() {
-      $scope.set_trial(0);
-    });
+    get_descriptions($scope.resources, 'en').subscribe(
+      function(descriptions) { $scope.descriptions = descriptions; },
+      function(error) { console.log("Could not load descriptions:", error); },
+      function() { }
+    );
+
+
+    /**
+     * Get stimuli and start experiment
+     */
+    get_stimuli($scope.resources, 'en').subscribe(
+      function(trial) { $scope.trials.push(trial); },
+      function(error) { console.log("Could not load stimuli:", error); },
+      function() { $scope.$apply(function() { $scope.set_trial(0); }); }
+    );    
   }
 ]);
