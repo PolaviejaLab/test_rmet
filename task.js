@@ -14,6 +14,18 @@ experimentFrontendControllers.controller('RMET', ['$scope', '$http', '$cookies',
     $scope.descriptions = {};
 
 
+    /** Determine the mode of the RMET task **/
+    if("mode" in $scope.screen.options) {
+      $scope.mode = $scope.screen.options['mode'];
+      
+      // Invalid mode specified
+      if(!($scope.mode in ["individual", "tablet", "group"]))
+        $scope.mode = "individual";      
+    } else {
+      $scope.mode = "individual";
+    }
+
+
     /**
      * Return index (0..3) of the current response
      */
