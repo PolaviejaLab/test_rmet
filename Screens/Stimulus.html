@@ -124,5 +124,13 @@
     </div>
   </div>
 
-  <div ng-hide="get_mode() == Mode_Central" id="footer" ng-include="'templates/buttons.html'"></div>
+  <div ng-show="get_mode() == Mode_Individual" 
+    id="footer" ng-include="'templates/buttons.html'"></div>
+    
+  <div ng-show="get_mode() == Mode_Peripheral" id="footer">
+    <div class="buttons">
+      <!--<button id="button_previous" class="navigation" ng-click="previous()" ng-class="{enabled: is_previous_allowed()}">Previous</button>-->
+      <button id="button_next" class="navigation" ng-click="set_final()">Next</button>
+    </div>
+  </div>
 </div>

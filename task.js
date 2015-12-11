@@ -132,9 +132,13 @@
         // Default is to set it as final
         if(value === undefined)
           value = true;
-          
+
         var key = $scope.get_final_key();
-        $scope.responses[key] = key;
+        $scope.responses[key] = value;
+
+        // Send signal        
+        if(value)
+          signal_peripheral_complete(Channel, $scope.trial['id'], $scope.withinGroupId);
       }
       
       
@@ -162,9 +166,9 @@
         if(!(key in $scope.responses))
           $scope.responses[key] = [];
         
-        if(!(clientId in $scope.responses[key]))
+        if($scope.responses[key].indexOf(clientId) == -1) 
           $scope.responses[key].push(clientId);
-          
+
         return $scope.get_ready_count();
       }
       
@@ -178,7 +182,7 @@
         
         if(!(key in $scope.responses))
           return 0;
-          
+
         return $scope.responses[key].length;
       }
       
@@ -213,7 +217,7 @@
           console.log("Unable to obtain context for canvas with id", canvasId);
           return false;
         }
-  
+    
         context.drawImage($scope.trial.image, 0, 0, canvas.clientWidth, canvas.clientHeight);
 
         if($scope.get_mode() == $scope.Mode_Central)
@@ -273,7 +277,10 @@
       */
       $scope.handle_keyboard_event = function(evt)
       {
-        if(evt.key == 'Enter') {
+        if($scope.get_mode() == $scope.Mode_Central)
+          return;
+        
+        if(evt.key == 'Enter' && $scope.get_mode() == $scope.Mode_Individual) {
           $scope.next();
           return;
         }
@@ -333,7 +340,7 @@
        *                if button clicked: mark trial as "ready"
        *
        * To this end, the peripheral mode uses a different button
-       *  that invokes the mark_ready function instead. That way we
+       *  that invokes the mark_ready() function instead. That way we
        *  can keep the next() implementation as-is. 
        */
 
@@ -349,6 +356,7 @@
         }
       }
   
+    
   
       /**
        * Move to the next trial
@@ -429,10 +437,6 @@
       }
       
      
-     
-     
-     
-    
       // Split participant id into parts
       $scope.extract_participant_id();
       
@@ -474,7 +478,7 @@
       Channel
         .filter(function(msg) { return msg.task == "RMETc" && msg.status == "complete" })
         .subscribe(function(msg) { 
-          if($scope.get_mode() = $scope.Mode_Peripheral)
+          if($scope.get_mode() == $scope.Mode_Peripheral)
             $scope.next(); 
          });
   
@@ -593,7 +597,7 @@
       "trial": trialId,
       "status": "complete"
     };
-    
+
     channel.onNext(message);
   }
 
