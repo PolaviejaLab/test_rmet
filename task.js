@@ -451,12 +451,11 @@
       // Mark msg.trial as complete for msg.withinGroupId
       Channel
         .filter(function(msg) { return msg.task == "RMETp" && msg.status == "complete" })
+        .filter(function(msg) { return $scope.trial['id'] == msg.trial; })
         .subscribe(function(msg) {
-          if($scope.trial['id'] != msg.trial) {
-            console.log("Complete message received, but trialId does not match.");
+          if($scope.get_mode() != $scope.Mode_Central)
             return;
-          }
-          
+                    
           $scope.mark_ready(msg.withinGroupId);
 
           // All clients present, continue to next trial          
@@ -469,7 +468,10 @@
       // Send status
       Channel
         .filter(function(msg) { return msg.task == "RMETc" && msg.status == "waiting" })
-        .subscribe(function(msg) { 
+        .subscribe(function(msg) {
+          if($scope.get_mode() != $scope.Mode_Peripheral)
+            return;
+           
           if($scope.is_final())
             signal_peripheral_complete(Channel, $scope.trial['id'], $scope.withinGroupId);
         });
@@ -477,7 +479,7 @@
       // Move to next stimulus
       Channel
         .filter(function(msg) { return msg.task == "RMETc" && msg.status == "complete" })
-        .subscribe(function(msg) { 
+        .subscribe(function(msg) {
           if($scope.get_mode() == $scope.Mode_Peripheral)
             $scope.next(); 
          });
