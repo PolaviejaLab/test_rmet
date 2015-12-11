@@ -2,8 +2,12 @@
   <div id="content" class="RMET">
 
     <div class="stimulus">
-
-      <div class="response_left">
+      
+      <!---------------------------------------------------------- 
+         First option 
+         --------------------------------------------------------->
+         
+      <div class="response_left" ng-hide="get_mode() == Mode_Central">
         <input type="radio" id="response1" name="response"
             class="answer"
             ng-model="responses[ prefix + trial.id ]"
@@ -13,8 +17,16 @@
           </label>
         </input>
       </div>
+      
+      <div class="response_left" ng-show="get_mode() == Mode_Central">
+        <label for="response1">{{ trial.options[0] }}</label>
+      </div>
+        
+      <!---------------------------------------------------------- 
+         Second option 
+         --------------------------------------------------------->      
 
-      <div class="response_right">
+      <div class="response_right" ng-hide="get_mode() == Mode_Central">
         <input type="radio" id="response2" name="response"
             class="answer"
             ng-model="responses[ prefix + trial.id ]"
@@ -25,11 +37,23 @@
         </input>
       </div>
 
+      <div class="response_right" ng-show="get_mode() == Mode_Central">
+        <label for="response2">{{ trial.options[1] }}</label>
+      </div>
+
+      <!---------------------------------------------------------- 
+         Stimulus 
+         --------------------------------------------------------->   
+
       <div class="image">
         <canvas id="image" width="500px" height="197px">
       </div>
 
-      <div class="response_left">
+      <!---------------------------------------------------------- 
+         Third option 
+         --------------------------------------------------------->   
+
+      <div class="response_left" ng-hide="get_mode() == Mode_Central">
         <input type="radio" id="response3" name="response"
             class="answer"
             ng-model="responses[ prefix + trial.id ]"
@@ -39,7 +63,16 @@
           </label>
         </input>
       </div>
-      <div class="response_right">
+      
+      <div class="response_left" ng-show="get_mode() == Mode_Central">
+        <label for="response3">{{ trial.options[2] }}</label>
+      </div>      
+      
+      <!---------------------------------------------------------- 
+         Fourth option 
+         --------------------------------------------------------->         
+      
+      <div class="response_right" ng-hide="get_mode() == Mode_Central">
         <input type="radio" id="response4" name="response"
             class="answer"
             ng-model="responses[ prefix + trial.id ]"
@@ -49,9 +82,17 @@
           </label>
         </input>
       </div>
+      
+      <div class="response_right" ng-show="get_mode() == Mode_Central">
+        <label for="response4">{{ trial.options[3] }}</label>
+      </div>      
+      
     </div>
 
-    <!-- Definition for emotions -->
+    <!---------------------------------------------------------- 
+        Emotion definitions 
+        --------------------------------------------------------->
+             
     <div class="definitions">
       <span class="definitions">Definitions</span>
 
@@ -83,5 +124,5 @@
     </div>
   </div>
 
-  <div id="footer" ng-include="'templates/buttons.html'"></div>
+  <div ng-hide="get_mode() == Mode_Central" id="footer" ng-include="'templates/buttons.html'"></div>
 </div>
