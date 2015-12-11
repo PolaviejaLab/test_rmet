@@ -321,9 +321,21 @@
       }
       
       
-      /************************
-       * Handle next/previous *
-       ************************/
+      /**
+       * Handle next/previous
+       * 
+       * Because code is shared between the three different modes of operation,
+       * the next button is handled differently for the RMET task.
+       * 
+       *  - Individual: check is_next_allowed() and move to next screen
+       *  - Central: move to next screen
+       *  - Peripheral: if control signal arrived: move to next screen
+       *                if button clicked: mark trial as "ready"
+       *
+       * To this end, the peripheral mode uses a different button
+       *  that invokes the mark_ready function instead. That way we
+       *  can keep the next() implementation as-is. 
+       */
 
   
       $scope.is_next_allowed = function()
