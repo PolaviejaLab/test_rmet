@@ -122,14 +122,29 @@
       */
       var Channel = Messaging.subscribe($scope.groupId);
       
+      // Mark msg.trial as complete for msg.withinGroupId
       Channel
         .filter(function(msg) { return msg.task == "RMETt" && msg.status == "complete" })
-        .subscribe(function(msg) { }); // Mark mask.trial as complete for msg.withinGroupId
+        .subscribe(function(msg) {
+          var key = $scope.prefix + "Central." + msg.trial + ".Ready";
+          
+          if(!(key in $scope.responses))
+            $scope.responses[key] = [];
+            
+          if(!(msg.withinGroupId in $scope.responses[key]))
+            $scope.responses[key].push(msg.withinGroupId); 
+          
+          // All clients present, continue to next trial
+          if($scope.responses[key].length == 3) {
+            Channel.onNext({});
+            // Next trial
+          }
+         });
       
       // Send status
       Channel
         .filter(function(msg) { return msg.task == "RMETg" && msg.status == "waiting" })
-        .subscribe(function(msg) { }); 
+        .subscribe(function(msg) { });
   
       // Move to next stimulus
       Channel
