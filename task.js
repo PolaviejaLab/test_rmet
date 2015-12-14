@@ -1,5 +1,8 @@
 /**
- * Reading the mind in the eyes test
+ * Reading the mind in the eyes test (RMET)
+ * 
+ * See http://autismresearchcentre.com/arc_tests
+ * for details about the RMET test
  * 
  * This test can be used in two modes:
  *   - Standalone
