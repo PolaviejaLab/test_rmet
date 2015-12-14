@@ -21,17 +21,33 @@ to give the responses.
   
 Screens
 -------
-  
-   Central                             Peripheral
-   -=-=-=-                             -=-=--=-=-
-   Group response                      Discuss with group
-                   RMETc/started -->
-                   RMETc/waiting -->
-   Stimulus only                       Individual options
-                   <-- RMETp/complete
-   Stimulus only                       Wait for others
-                   RMETc/complete -->
-   
+ 
+<table>
+  <tr>
+    <th>Central</th> <th>Message</th> <th>Perihperal</th>
+  </tr>
+  <tr>
+    <td>Group response</td> <td></td> <td>Discuss with group</td>
+  </tr>
+  <tr>
+    <td></td> <td>RMETc/started &#8608;</td> <td></td>
+  </tr>  
+  <tr>
+    <td></td> <td>RMETc/waiting &#8608;</td> <td></td>
+  </tr>  
+  <tr>
+    <td>Stimulus only</td> <td></td> <td>Individual options</td>
+  </tr>  
+  <tr>
+    <td></td> <td>&#8606; RMETp/complete</td> <td></td>
+  </tr>
+  <tr>
+    <td>Stimulus only</td> <td></td> <td>Wait for others</td>
+  </tr>
+  <tr>
+    <td></td> <td>RMETc/complete &#8608;</td> <td></td>
+  </tr>
+</table>
   
 Communication
 -------------
