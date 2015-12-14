@@ -8,6 +8,7 @@
  *   - Standalone
  *   - In a group
  * 
+ * 
  * Group mode
  * ----------
  * 
@@ -15,6 +16,21 @@
  * display the current trial (eyes) on a central
  * screen and allows peripheral devices (e.g. tablets)
  * to give the responses.
+ *
+ * 
+ * Screens
+ * -------
+ * 
+ *  Central                             Peripheral
+ *  -=-=-=-                             -=-=--=-=-
+ *  Group response                      Discuss with group
+ *                  RMETc/started -->
+ *                  RMETc/waiting -->
+ *  Stimulus only                       Individual options
+ *                  <-- RMETp/complete
+ *  Stimulus only                       Wait for others
+ *                  RMETc/complete -->
+ *  
  * 
  * Communication
  * -------------
@@ -33,10 +49,12 @@
  *   status: See below
  * 
  * The status field can have the following values:
+ *   "stated": Signals start of individual phase
  *   "complete": Central computer signals start of next trial
  *               Peripheral devices signal completion of trial
  *   "waiting": Central computer signals it is ready
  *              Peripheral devices are waiting for participant
+ * 
  * 
  * Storage
  * -------
