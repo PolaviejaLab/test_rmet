@@ -83,3 +83,14 @@ have finished the trial is available under key
 In case of the peripheral devices, whether the answer is final
 will be recorded under "RMET.Peripheral.[TrialNr].IsFinal".
  
+ 
+Keyboard shortcuts
+------------------
+
+The following keys are available within the RMET task:
+ * Key 1, top left
+ * Key 2, top right
+ * Key 3, bottom left
+ * Key 4, bottom right
+ * Arrow keys
+ 
