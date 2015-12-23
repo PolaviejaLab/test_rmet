@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "sourceRoot": "Scripts",
+        "sourceMap": true,
+        "out": "task.js"
+    }
+}
